@@ -2,3 +2,8 @@ work/
 *.fa
 *.bam
 *.tar.gz
+counts.txt
+deseq2-results.csv
+nohup.out
+refs/features.gff
+refs/genome.fa.fai
