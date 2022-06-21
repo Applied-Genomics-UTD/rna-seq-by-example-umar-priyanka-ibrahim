@@ -7,3 +7,7 @@ refs/grinch-genome.fa: grinch.tar.gz
 seqkit: refs/grinch-genome.fa
 	seqkit stats reads/*.fq
 	seqkit stats refs/grinch-genome.fa
+	wc -l refs/grinch-ann*
+
+refs/grinch-genome.fa.fai: 
+	samtools faidx refs/grinch-genome.fa
