@@ -9,5 +9,5 @@ seqkit: refs/grinch-genome.fa
 	seqkit stats refs/grinch-genome.fa
 	wc -l refs/grinch-ann*
 
-refs/grinch-genome.fa.fai: 
+refs/grinch-genome.fa.fai: refs/grinch-genome.fa
 	samtools faidx refs/grinch-genome.fa
