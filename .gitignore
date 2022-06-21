@@ -7,3 +7,8 @@ deseq2-results.csv
 nohup.out
 refs/features.gff
 refs/genome.fa.fai
+*.pdf
+*csv
+A
+B
+CHANGED
