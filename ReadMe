@@ -1,0 +1,3 @@
+ml load anaconda3
+source activate biostars
+make SG
