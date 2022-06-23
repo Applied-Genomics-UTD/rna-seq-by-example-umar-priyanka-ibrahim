@@ -1,4 +1,6 @@
 IDX=refs/grinch-genome.fa
+
+All:SG
 grinch:
 	wget -nc http://data.biostarhandbook.com/rnaseq/data/grinch.tar.gz
 
