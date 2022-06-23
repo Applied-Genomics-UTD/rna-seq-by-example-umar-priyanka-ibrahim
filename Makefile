@@ -26,3 +26,8 @@ BAM:ids
 FC:
 	featureCounts -s 2 -a refs/grinch-annotations_3.gtf -o counts-sense.txt bam/C*.bam bam/W*.bam
 	featureCounts -s 1 -a refs/grinch-annotations_3.gtf -o counts-anti.txt bam/C*.bam bam/W*.bam
+
+SG: 
+	cat refs/grinch-annotations_2.gff | awk '$$3=="gene" { print $$0 }' > genes.gff
+	bedtools coverage -S -a genes.gff -b bam/*.bam > coverage.txt
+	cat coverage.txt | cut -f 9,13 | tr ";" "\t" | cut -f 1,3 | sort -k2,2rn > tin.txt
