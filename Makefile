@@ -23,3 +23,5 @@ BAM:ids
 	cat ids | parallel "hisat2 --max-intronlen 2500 -x ${IDX} -U reads/{}.fq  | samtools sort > bam/{}.bam"
 	cat ids | parallel samtools index bam/{}.bam
 
+FC:
+	featureCounts -a refs/grinch-annotations_3.gtf -o counts.txt bam/C*.bam bam/W*.bam
